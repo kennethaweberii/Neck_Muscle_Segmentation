@@ -22,7 +22,7 @@ https://github.com/NifTK/NiftyNet/blob/dev/LICENSE
     * conda env create -f environment_cpu.yml
     * Use environment_gpu.yml if you want to use GPU version of tensorflow (Not tested)
 7. Activate the conda environment:
-    * source activate Neck_Muscle_Segmentation
+    * conda activate Neck_Muscle_Segmentation
 8. Update path_to_search, filename_contains, and filename_not_contains to folder with IP and OP images
 9. Run net_segment command to perform segmentations:
     * net_segment -c inference.ini inference
