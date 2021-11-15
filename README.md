@@ -1,41 +1,48 @@
 # Neck Muscle Segmentation
 
-<img src="https://github.com/kennethaweberii/Neck_Muscle_Segmentation/segmentation_figure.jpg">
+<p align="center">
+<img src="https://github.com/kennethaweberii/Neck_Muscle_Segmentation/blob/main/segmentation_figure.jpg" width="500">
+</p>
 
-<!--- <img src="https://github.com/kennethaweberii/Neck_Muscle_Segmentation/segmentation_figure.jpg" width="263" height="155"> --->
+This model was develoepd using NiftyNet. NiftyNet is a TensorFlow-based open-source convolutional neural networks (CNN) platform for research in medical image analysis and image-guided therapy.
 
-This model was develoepd using NiftyNet. NiftyNet is a [TensorFlow][tf]-based open-source convolutional neural networks (CNN) platform for research in medical image analysis and image-guided therapy.
-NiftyNet's modular structure is designed for sharing networks and pre-trained models.
+https://github.com/NifTK/NiftyNet
 
-[![NiftyNet](https://github.com/NifTK/NiftyNet)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/NifTK/NiftyNet/blob/dev/LICENSE)
-[![PyPI version](https://badge.fury.io/py/NiftyNet.svg)](https://badge.fury.io/py/NiftyNet)
-
+https://github.com/NifTK/NiftyNet/blob/dev/LICENSE
 
 ### Installation
 
-1. Please install the appropriate [TensorFlow][tf] package*:
-   * [`pip install "tensorflow==1.15.*"`][tf-pypi]
-2. [`pip install niftynet`](https://pypi.org/project/NiftyNet/)
+1. Install conda: https://www.anaconda.com/
+2. Download Neck_Muscle_Segmentation code and unzip if necessary. 
+3. Download the model file here: https://office365stanford-my.sharepoint.com/:u:/g/personal/kenweber_stanford_edu/EZjYg_yWeeRKtlWEi3IlmmoBuggmrsdsCCx9QFwXsvuKkw?e=bgNNvE
+    * File is >100 MB and too big for GitHub
+4. Copy model.ckpt-100000.meta into ./Neck_Muscle_Segmentation/neck_muscle_segmentation_model/models/
+5. Enter into the Neck_Muscle_Segmentation folder
+6. Create a conda environment:
+    * conda env create -f environment_cpu.yml
+    * Use environment_gpu.yml if you want to use GPU version of tensorflow (Not tested)
+7. Activate the conda environment:
+    * source activate Neck_Muscle_Segmentation
+8. Update path_to_search, filename_contains, and filename_not_contains to folder with IP and OP images
+9. Run net_segment command to perform segmentations:
+    * net_segment -c inference.ini inference
 
-To install from the source repository, please checkout [the instructions](http://niftynet.readthedocs.io/en/dev/installation.html).</sup>
+### Image Formatting Requirements
 
-[tf-pypi-gpu]: https://pypi.org/project/tensorflow-gpu/
-[tf-pypi]: https://pypi.org/project/tensorflow/
+The model requires that the both the IP (in-phase) and OP (out-of-phase) images are present. The images should be in NIFTI format with separate files for the IP and OP images.
 
+To convert DICOM to NIFTI, you can use: https://github.com/rordenlab/dcm2niix
 
-### Citing Neck Segmentation Model
+### Citing Neck Muscle Segmentation Model
 
-If you use use this model in your work, please cite [Weber II KA et al. 2021][weber2021]:
+If you use use this model in your work, please cite:
 
-* K. A. Weber 2nd, R. Abbott, V. Bojilov, A. C. Smith, M. Wasielewski, T. J. Hastie, T. B. Parrish, S. Mackey, J. M.Elliott (2021)
-[Multi-muscle deep learning segmentation to automate the quantification of muscle fat infiltration in cervical spine conditions][weber2021], _Scientific Reports_.
-DOI: [10.1038/s41598-021-95972-x][weber2021]
+* K. A. Weber 2nd, R. Abbott, V. Bojilov, A. C. Smith, M. Wasielewski, T. J. Hastie, T. B. Parrish, S. Mackey, and J. M. Elliott. Multi-muscle deep learnng segmentation to automate the quantification of muscle fat infiltration in cervical spine conditions, _Scientific Reports_., 2021;11(1):16567.
+(https://doi.org/10.1038/s41598-021-95972-x)
 
 ### Citing NiftyNet
 
-If you use NiftyNet in your work, please cite [Gibson and Li, et al. 2018][cmpb2018]:
+If you use this model in your work, please cite:
 
-* E. Gibson\*, W. Li\*, C. Sudre, L. Fidon, D. I. Shakir, G. Wang, Z. Eaton-Rosen, R. Gray, T. Doel, Y. Hu, T. Whyntie, P. Nachev, M. Modat, D. C. Barratt, S. Ourselin, M. J. Cardoso† and T. Vercauteren† (2018)
-[NiftyNet: a deep-learning platform for medical imaging][cmpb2018], _Computer Methods and Programs in Biomedicine_.
-DOI: [10.1016/j.cmpb.2018.01.025][cmpb2018]
+* E. Gibson, W. Li, C. Sudre, L. Fidon, D. I. Shakir, G. Wang, Z. Eaton-Rosen, R. Gray, T. Doel, Y. Hu, T. Whyntie, P. Nachev, M. Modat, D. C. Barratt, S. Ourselin, M. J. Cardoso, and T. Vercauteren†. NiftyNet: a deep-learning platform for medical imaging. _Computer Methods and Programs in Biomedicine_, 2018;158:113-122.
+(https://doi.org/10.1016/j.cmpb.2018.01.025)
