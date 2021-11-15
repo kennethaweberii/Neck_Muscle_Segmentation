@@ -3,5 +3,6 @@ channels:
     - conda-forge
 dependencies:
     - tensorflow==1.15.*
+    - pip
     - pip:
         - niftynet==0.6.0
