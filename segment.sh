@@ -1,2 +1,0 @@
-source activate Neck_Muscle_Segmentation
-net_segment -c inference.ini inference
