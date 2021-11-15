@@ -12,17 +12,18 @@ https://github.com/NifTK/NiftyNet/blob/dev/LICENSE
 
 ### Installation
 
-1. Please install conda.
-2. Download the model file here: https://office365stanford-my.sharepoint.com/:u:/g/personal/kenweber_stanford_edu/EZjYg_yWeeRKtlWEi3IlmmoBuggmrsdsCCx9QFwXsvuKkw?e=bgNNvE
+1. Install conda: https://www.anaconda.com/
+2. Download Neck_Muscle_Segmentation code and unzip if necessary. 
+3. Download the model file here: https://office365stanford-my.sharepoint.com/:u:/g/personal/kenweber_stanford_edu/EZjYg_yWeeRKtlWEi3IlmmoBuggmrsdsCCx9QFwXsvuKkw?e=bgNNvE
     * File is >100 MB and too big for GitHub
-4. Copy model.ckpt-100000.meta into Neck_Muscle_Segmentation/neck_muscle_segmentation_model/models/
+4. Copy model.ckpt-100000.meta into ./Neck_Muscle_Segmentation/neck_muscle_segmentation_model/models/
 5. Enter into the Neck_Muscle_Segmentation folder
 6. Create a conda environment:
     * conda env create -f environment_cpu.yml
-    * Use environment_gpu.yml if you want to use GPU version of tensorflow
+    * Use environment_gpu.yml if you want to use GPU version of tensorflow (Not tested)
 7. Activate the conda environment:
-    * Source activate Neck_Muscle_Segmentation
-8. Update path_to_search, filename_contains, and filename_not_contains to identify IP and OP images
+    * source activate Neck_Muscle_Segmentation
+8. Update path_to_search, filename_contains, and filename_not_contains to folder with IP and OP images
 9. Run net_segment command to perform segmentations:
     * net_segment -c inference.ini inference
 
