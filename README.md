@@ -27,6 +27,12 @@ https://github.com/NifTK/NiftyNet/blob/dev/LICENSE
 9. Run net_segment command to perform segmentations:
     * net_segment -c inference.ini inference
 
+### Image Formatting Requirements
+
+The model requires that the both the IP (in-phase) and OP (out-of-phase) images are present. The images should be in NIFTI format with separate files for the IP and OP images.
+
+To convert DICOM to NIFTI, you can use: https://github.com/rordenlab/dcm2niix
+
 ### Citing Neck Muscle Segmentation Model
 
 If you use use this model in your work, please cite:
@@ -36,7 +42,7 @@ If you use use this model in your work, please cite:
 
 ### Citing NiftyNet
 
-If you use NiftyNet in your work, please cite:
+If you use this model in your work, please cite:
 
 * E. Gibson, W. Li, C. Sudre, L. Fidon, D. I. Shakir, G. Wang, Z. Eaton-Rosen, R. Gray, T. Doel, Y. Hu, T. Whyntie, P. Nachev, M. Modat, D. C. Barratt, S. Ourselin, M. J. Cardoso, and T. Vercauteren†. NiftyNet: a deep-learning platform for medical imaging. _Computer Methods and Programs in Biomedicine_, 2018;158:113-122.
 (https://doi.org/10.1016/j.cmpb.2018.01.025)
