@@ -4,7 +4,7 @@
 <img src="https://github.com/kennethaweberii/Neck_Muscle_Segmentation/blob/main/segmentation_figure.jpg" width="500">
 </p>
 
-This model was develoepd using NiftyNet. NiftyNet is a TensorFlow-based open-source convolutional neural networks (CNN) platform for research in medical image analysis and image-guided therapy.
+This model was developed using NiftyNet. NiftyNet is a TensorFlow-based open-source convolutional neural networks (CNN) platform for research in medical image analysis. The model and code here have been tested on an Ubuntu 18.04.5 LTS workstation using only the CPU.
 
 https://github.com/NifTK/NiftyNet
 
@@ -17,13 +17,13 @@ https://github.com/NifTK/NiftyNet/blob/dev/LICENSE
 3. Download the model file here: https://office365stanford-my.sharepoint.com/:u:/g/personal/kenweber_stanford_edu/EZjYg_yWeeRKtlWEi3IlmmoBuggmrsdsCCx9QFwXsvuKkw?e=bgNNvE
     * File is >100 MB and too big for GitHub
 4. Copy model.ckpt-100000.meta into ./Neck_Muscle_Segmentation/neck_muscle_segmentation_model/models/
-5. Enter into the Neck_Muscle_Segmentation folder
+5. In the command line, navigate to the Neck_Muscle_Segmentation folder
 6. Create a conda environment:
     * conda env create -f environment_cpu.yml
-    * Use environment_gpu.yml if you want to use GPU version of tensorflow (Not tested)
+      * Use environment_gpu.yml if you want to use GPU version of tensorflow (Not tested)
 7. Activate the conda environment:
     * conda activate Neck_Muscle_Segmentation
-8. Update path_to_search, filename_contains, and filename_not_contains to folder with IP and OP images
+8. In a text editor, open inference.ini, and update path_to_search, filename_contains, and filename_not_contains to the folder with the IP and OP images
 9. Run net_segment command to perform segmentations:
     * net_segment -c inference.ini inference
 
