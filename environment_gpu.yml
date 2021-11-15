@@ -1,0 +1,7 @@
+name: Neck_Muscle_Segmentation
+channels:
+    - conda-forge
+dependencies:
+    - tensorflow-gpu==1.15.*
+    - pip:
+        - niftynet==0.6.0
