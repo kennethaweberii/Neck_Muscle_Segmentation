@@ -1,3 +1,5 @@
+# This repository is no longer actively maintained. Please see the [MuscleMap Toolbox](https://musclemap.github.io/MuscleMap) for neck muscle segmentation tools.
+
 # Neck Muscle Segmentation
 
 <p align="center">
